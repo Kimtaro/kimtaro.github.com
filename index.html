@@ -10,8 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     $(function(){
       $('.token').live('mouseenter', function(e){
-        $(this).children('.pos').css('left', $(this).position().left);
-        $(this).children('.pos').css('top', ($(this).position().top + $(this).height()));
+        $(this).children('.pos').css('left', $(this).position().left)
+                                .css('top', ($(this).position().top + $(this).height()));
       });
     });
   </script>
