@@ -11,20 +11,21 @@
     $(function(){
       $('.token').live('mouseenter', function(e){
         $(this).children('.pos').css('left', $(this).position().left);
+        $(this).children('.pos').css('top', ($(this).position().top + $(this).height()));
       });
     });
   </script>
   <style type="text/css" media="screen">
     body { font-family: Menlo, Courier, Monospace; font-size: 14px; line-height: 1.5; text-align: justify; color: #333; }
-    #main { width: 40em; }
+    #main { display: block; width: 40em; }
     p { margin: 0 0 2em 0; }
     a { color: #00f; text-decoration: none; }
     a:hover { color: #f00; text-decoration: underline; }
     a:visited { color: #f0f; }
     
-    .token:hover { color: #FF9333; }
+    .token:hover { color: #FF9333; background: #FDF3CD; }
     .token:hover .pos { display: block; }
-    .pos { display: none; position: absolute; left: auto; background: #fff; }
+    .pos { display: none; position: absolute; left: auto; background: #FDF3CD; }
   </style>
   
 </head>
