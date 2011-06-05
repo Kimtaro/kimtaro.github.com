@@ -1,94 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Kim Ahlström</title>
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+      $('.token').live('mouseenter', function(e){
+        $(this).children('.pos').css('left', $(this).position().left)
+                                .css('top', ($(this).position().top + $(this).height()));
+      });
+    });
+  </script>
+  <style type="text/css" media="screen">
+    body { font-family: Menlo, Courier, Monospace; font-size: 14px; line-height: 1.5; text-align: justify; color: #333; }
+    #main { display: block; width: 40em; margin: 6em auto 0 auto; }
+    p { margin: 0 0 2em 0; }
+    a { color: #00f; text-decoration: none; }
+    a:hover { color: #f00; text-decoration: underline; }
+    a:visited { color: #f0f; }
+    
+    .token:hover { background: #FDF3CD; }
+    .token:hover .pos { display: block; }
+    .token:hover a:hover .pos { text-decoration: none; }
+    .pos { display: none; position: absolute; left: auto; background: #FDF3CD; color: #FF9333; }
+  </style>
 
-  <head>
-    <title>Bacon Weave</title>
-    <style type="text/css">
-      body {
-        background: #f6f6f6;
-        font-family: Helvetica Neue, Helvetica, Sans-serif;
-      }
-      h1 {
-        font-size: 1.2em;
-        text-align: center;
-        color: #7B362E;
-        margin: 30px 0 45px 0;
-      }
-      div {
-        width: 80%;
-        margin: 15px auto 70px auto;
-        padding: 0;
-        background: white;
-        border: 1px solid #999;
-        box-shadow: 0 5px 40px #777;
-        -webkit-box-shadow: 0 5px 40px #777;
-        -mozilla-box-shadow: 0 5px 40px #777;
-      }
-      img {
-        width: 100%;
-        margin: 0 0 -3px 0;
-        padding: 0;
-      }
-      p {
-        display: none;
-        background: rgba(0, 0, 0, 0.65);
-        color: rgba(256, 256, 256, 1);
-        position: relative;
-        height: 20px;
-        margin: 0 0 -40px 0;
-        padding: 10px 10px 10px 13px;
-      }
-      div:hover p {
-        display: block;
-      }
-      footer {
-        width: 80%;
-        margin: 0 auto 25px auto;
-        font-size: 0.9em;
-      }
-      a {
-        color: #000;
-      }
-    </style>
-  </head>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-63389-8']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</head>
+<body id="home">
+
+  <!-- Crazy markup is crazy. Automate this once Ve is done. -->
+
+  <section id="main">
+    <p>
+      <span class="token">Hi<span class="pos">interjection</span></span><span class="token">,<span class="pos">symbol</span></span> <span class="token">I<span class="pos">pronoun</span></span><span class="token">’m<span class="pos">verb</span></span> <span class="token">Kim<span class="pos">propernoun</span></span><span class="token">.<span class="pos">symbol</span></span> <span class="token">I<span class="pos">pronoun</span></span> <span class="token">live<span class="pos">verb</span></span> <span class="token">in<span class="pos">preposition</span></span> <span class="token">Tokyo<span class="pos">propernoun</span></span> <span class="token">and<span class="pos">conjunction</span></span> <span class="token">work<span class="pos">verb</span></span> <span class="token">with<span class="pos">preposition</span></span> <span class="token">the<span class="pos">determiner</span></span> <span class="token">web<span class="pos">noun</span></span> <span class="token">and<span class="pos">conjunction</span></span> <span class="token">human<span class="pos">adjective</span></span> <span class="token">language<span class="pos">noun</span></span><span class="token">.<span class="pos">symbol</span></span>
+    </p>
+    
+    <p>
+      <span class="token">Previously<span class="pos">adverb</span></span> <span class="token">I<span class="pos">pronoun</span></span><span class="token">’ve<span class="pos">verb</span></span> <span class="token">worked<span class="pos">verb</span></span> <span class="token">at<span class="pos">preposition</span></span> <a href="http://iknow.jp/"><span class="token">iKnow!<span class="pos">propernoun</span></span></a><span class="token">,<span class="pos">symbol</span></span> <span class="token">but<span class="pos">conjunction</span></span> <span class="token">now<span class="pos">adverb</span></span> <span class="token">I<span class="pos">pronoun</span></span><span class="token">’m<span class="pos">verb</span></span> <span class="token">hanging<span class="pos">verb</span></span> <span class="token">out<span class="pos">postposition</span></span> <span class="token">with<span class="pos">preposition</span></span> <span class="token">the<span class="pos">determiner</span></span> <span class="token">fine<span class="pos">adjective</span></span> <span class="token">folks<span class="pos">noun</span></span> <span class="token">at<span class="pos">preposition</span></span> <a href="http://www.foodspotting.com/"><span class="token">Foodspotting<span class="pos">propernoun</span></span></a> <span class="token">and<span class="pos">conjunction</span></span> <a href="http://mygengo.com/"><span class="token">myGengo<span class="pos">propernoun</span></span></a><span class="token">.<span class="pos">symbol</span></span> <span class="token">In<span class="pos">preposition</span></span> <span class="token">my<span class="pos">pronoun</span></span> <span class="token">free<span class="pos">adjective</span></span> <span class="token">time<span class="pos">noun</span></span> <span class="token">I<span class="pos">pronoun</span></span> <span class="token">run<span class="pos">verb</span></span> <span class="token">a<span class="pos">determiner</span></span> <span class="token">Japanese<span class="pos">propernoun</span></span> <span class="token">dictionary<span class="pos">noun</span></span> <span class="token">called<span class="pos">verb</span></span> <a href="http://jisho.org/"><span class="token">Jisho.org<span class="pos">propernoun</span></span></a><span class="token">.<span class="pos">symbol</span></span>
+    </p>
+    
+    <p>
+      <span class="token">I<span class="pos">pronoun</span></span><span class="token">’m<span class="pos">verb</span></span> <a href="http://twitter.com/kimtaro"><span class="token">@kimtaro<span class="pos">propernoun</span></span></a> <span class="token">on<span class="pos">preposition</span></span> <span class="token">Twitter<span class="pos">propernoun</span></span><span class="token">,<span class="pos">symbol</span></span> <span class="token">and<span class="pos">conjunction</span></span> <span class="token">my<span class="pos">pronoun</span></span> <span class="token">work<span class="pos">noun</span></span> <span class="token">lives<span class="pos">verb</span></span> <span class="token">on<span class="pos">preposition</span></span> <a href="http://github.com/Kimtaro"><span class="token">github.com/Kimtaro<span class="pos">propernoun</span></span></a><span class="token">.<span class="pos">symbol</span></span>
+    </p>
+  </section>
   
-  <body>
-    <h1>Bacon Weave</h1>
-    <div>
-      <p>Meat from three kinds of sausages. Chorizo, Salsiccia and a lokal smokey one.</p>
-      <img src="P1100941.jpg">
-    </div>
-    <div>
-      <p>The weave, with a sweet chili bbq rub.</p>
-      <img src="P1100946.jpg">
-    </div>
-    <div>
-      <p>Weave, sausage meat and fried bacon bits.</p>
-      <img src="P1100965.jpg">
-    </div>
-    <div>
-      <p>The rolled package, with bbq oil.</p>
-      <img src="P1100976.jpg">
-    </div>
-    <div>
-      <p>Fresh out of the oven. Don't worry about the fat that's escaped. It's still juicy.</p>
-      <img src="P1100985.jpg">
-    </div>
-    <div>
-      <p>BAM.</p>
-      <img src="P1100987.jpg">
-    </div>
-    <div>
-      <p>Served.</p>
-      <img src="P1110001.jpg">
-    </div>
-    <div>
-      <p>Sweet Jesus.</p>
-      <img src="P1110011.jpg">
-    </div>
-    <footer>
-      By <a href="http://twitter.com/#!/kimtaro">@kimtaro</a>. Hat tip to <a href="http://www.bbqaddicts.com/blog/recipes/bacon-explosion/">bbqaddicts.com</a>.
-    </footer>
-  </body>
-
+</body>
 </html>
