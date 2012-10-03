@@ -14,37 +14,12 @@
         color: white;
       }
       
-      @keyframes nineties {
-        from {
-          left: 0;
-        }
-        to {
-          left: calc(100% - 600px);
-        }
-      }
-      @-moz-keyframes nineties {
-        from {
-          left: 0;
-        }
-        to {
-          left: -moz-calc(100% - 600px);
-        }
-      }
-      @-webkit-keyframes nineties {
-        from {
-          left: 0;
-        }
-        to {
-          left: -webkit-calc(70%); /* -webkit-calc(100% - 600px); crashes Safari */
-        }
-      }
-      h1 {
-        width: 100%;
-        position: relative;
+      h1 span {
+        display: inline-block;
         text-shadow: 0 0 15px;
         -webkit-animation-duration: 2s;
-        -webkit-animation-name: nineties;
-        -webkit-animation-iteration-count: infinite;
+/*        -webkit-animation-name: nineties;
+*/        -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction: alternate;
         -webkit-animation-timing-function: linear;
         
@@ -64,7 +39,7 @@
   </head>
   <body>
     
-    <h1>Blip Festival Tokyo 2012</h1>
+    <h1><span>Blip Festival Tokyo 2012</span></h1>
 
     <p>Example tracks from all the artists, in order of appearance. Read more about the event at <a href="http://tokyo.blipfestival.org/2012/">tokyo.blipfestival.org/2012</a>.</p>
     
@@ -152,7 +127,28 @@
   
   <script type="text/javascript" charset="utf-8">
     var colors = ['#FFC946', '#00FFCF', '#CE0CCB', '#3C2EB7'];
-    var title = document.querySelector('h1');
+    var h1 = document.querySelector('h1');
+    var title = document.querySelector('h1 span');
+    
+    // /* -webkit-calc(100% - 600px); crashes Safari when it's in the stylesheet directly */
+    var h1_width = parseInt(window.getComputedStyle(h1).getPropertyValue('width'));
+    var title_width = parseInt(window.getComputedStyle(title).getPropertyValue('width'));
+    var lastSheet = document.styleSheets[document.styleSheets.length - 1];
+    if ( 'webkitAnimationName' in title.style ) {
+      var rule = "@-webkit-keyframes nineties {from {margin-left: 0;} to {margin-left: " + (h1_width - title_width) + "px;}}";
+      lastSheet.insertRule(rule, lastSheet.cssRules.length);
+      title.style.webkitAnimationName = 'nineties';
+    }
+    if ( 'MozAnimationName' in title.style ) {
+      var rule = "@-moz-keyframes nineties {from {margin-left: 0;} to {margin-left: " + (h1_width - title_width) + "px;}}";
+      lastSheet.insertRule(rule, lastSheet.cssRules.length);
+      title.style.MozAnimationName = 'nineties';
+    }
+    if ( 'animationName' in title.style ) {
+      var rule = "@keyframes nineties {from {margin-left: 0;} to {margin-left: " + (h1_width - title_width) + "px;}}";
+      lastSheet.insertRule(rule, lastSheet.cssRules.length);
+      title.style.animationName = 'nineties';
+    }
     
     function changeColor() {
       color = colors[Math.floor(Math.random() * colors.length)];
